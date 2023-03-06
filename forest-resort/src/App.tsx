@@ -11,7 +11,7 @@ import { Rooms } from "./pages/Rooms";
 import { SingleRoom } from "./pages/SingleRoom";
 import { Home } from "./pages/Home";
 import { Error } from "./pages/Error";
-import { Navbar } from "./components/Navbar";
+import { Navbar } from "./components/Navbar/Navbar";
 
 function App() {
   return (
