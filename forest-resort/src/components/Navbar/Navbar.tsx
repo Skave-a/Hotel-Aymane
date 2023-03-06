@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../images/logo.svg";
+import logo from "../../images/logo.svg";
 import { FaAlignRight } from "react-icons/fa";
 import styles from "./Navbar.module.css";
 
