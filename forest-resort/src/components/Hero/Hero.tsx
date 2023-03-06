@@ -1,4 +1,4 @@
-import { IHero } from "../../utitle/types";
+import { IHero } from "../../utils/types";
 
 export default function Hero(props: IHero) {
   const { children, hero } = props;
