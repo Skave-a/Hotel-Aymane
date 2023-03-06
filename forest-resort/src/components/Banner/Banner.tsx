@@ -1,5 +1,5 @@
 import React from "react";
-import { IBanner } from "../../utitle/types";
+import { IBanner } from "../../utils/types";
 import styles from "./Banner.module.css";
 
 export default function Banner(props: IBanner) {
