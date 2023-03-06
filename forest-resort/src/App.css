@@ -170,7 +170,7 @@ h6 {
 } */
 /* End of Hero */
 /* Banner */
-.banner {
+/* .banner {
   display: inline-block;
   background: rgba(0, 0, 0, 0.5);
   color: var(--mainWhite);
@@ -207,7 +207,7 @@ h6 {
   .banner h1 {
     font-size: 4rem;
   }
-}
+} */
 /* End of Banner */
 /* Title */
 .section-title {
