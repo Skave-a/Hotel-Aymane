@@ -10,14 +10,12 @@ export default class Feature extends Component {
   static contextType = RoomContext;
   render() {
     const { loading, featuredRooms: rooms } = this.context as IdefaultValue;
-    const allRooms = rooms.map((room) => {
-      console.log(room);
-      return <Rooms key={room.sys.id} room={room} />;
+    const allRooms = rooms.map((room, id) => {
+      return <Rooms key={id} room={room} />;
     });
     return (
       <section className={styles.featuredRooms}>
         <Title title={SERVICE_MESSAGES.featuredRooms} />
-        {/* <Loading /> */}
         <div className={styles.featuredRoomsCenter}>
           {/* {loading ? <Location /> : rooms} */}
         </div>

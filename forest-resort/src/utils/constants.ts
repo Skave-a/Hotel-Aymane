@@ -6,6 +6,7 @@ export const SERVICE_MESSAGES = {
   returnHome: 'return home',
   pageNotFound: 'Page not found',
   featuredRooms: 'featured rooms',
+  loading: 'rooms data loading',
 }
 
 export const Title_Services = {
