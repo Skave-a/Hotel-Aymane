@@ -16,6 +16,7 @@ export interface IdefaultValue {
   sortedRooms: IRoom[],
   featuredRooms: IRoom[],
   loading: boolean,
+  getRoom: (slug: string) => IR,
 }
 
 export interface IImg {

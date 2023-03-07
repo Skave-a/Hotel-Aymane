@@ -8,10 +8,10 @@ import {
   Routes,
 } from "react-router-dom";
 import { Rooms } from "./pages/Rooms";
-import { SingleRoom } from "./pages/SingleRoom";
 import { Home } from "./pages/Home";
 import { Error } from "./pages/Error";
 import { Navbar } from "./components/Navbar/Navbar";
+import SingleRoom from "./pages/SingleRoom";
 
 function App() {
   return (
@@ -19,8 +19,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/rooms" element={<Rooms />} />
-        <Route path="/single-room" element={<SingleRoom />} />
+        <Route path="/rooms/" element={<Rooms />} />
+        <Route path="/rooms/:slug" element={<SingleRoom />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
