@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Banner from "../components/Banner/Banner";
 import Hero from "../components/Hero/Hero";
@@ -9,7 +8,7 @@ export const Rooms = () => {
   return (
     <Hero hero={styles.roomsHero}>
       <Banner title={SERVICE_MESSAGES.ourRooms} subtitle={""}>
-        <Link to="/" className="btn-primary">
+        <Link to="/" className="btnPrimary">
         {SERVICE_MESSAGES.returnHome}
         </Link>
       </Banner>

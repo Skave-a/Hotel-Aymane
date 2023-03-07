@@ -5,6 +5,11 @@ export const SERVICE_MESSAGES = {
   deluxRooms: 'delux rooms starting at $299',
   returnHome: 'return home',
   pageNotFound: 'Page not found',
+  featuredRooms: 'featured rooms',
+  loading: 'rooms data loading',
+  singleRoom: 'single room',
+  perNight: 'per night',
+  features: 'Features',
 }
 
 export const Title_Services = {

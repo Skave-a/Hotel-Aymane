@@ -9,7 +9,7 @@ export const Error = () => {
   return (
     <Hero hero={styles.roomsHero}>
       <Banner title={"404"} subtitle={SERVICE_MESSAGES.pageNotFound}>
-        <Link to="/" className="btn-primary">
+        <Link to="/" className="btnPrimary">
           {SERVICE_MESSAGES.returnHome}
         </Link>
       </Banner>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Banner from "../components/Banner/Banner";
+import Feature from "../components/Feature/Feature";
 import Hero from "../components/Hero/Hero";
 import styles from "../components/Hero/Hero.module.css";
 import Services from "../components/Services/Services";
@@ -14,12 +15,13 @@ export const Home = () => {
           title={SERVICE_MESSAGES.luxuriousRooms}
           subtitle={SERVICE_MESSAGES.deluxRooms}
         >
-          <Link to="/rooms" className="btn-primary">
+          <Link to="/rooms" className="btnPrimary">
             {SERVICE_MESSAGES.ourRooms}
           </Link>
         </Banner>
       </Hero>
       <Services />
+      <Feature />
     </>
   );
 };
