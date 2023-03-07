@@ -16,10 +16,10 @@ import { Navbar } from "./components/Navbar/Navbar";
 function App() {
   return (
     <BrowserRouter>
-    <Navbar />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/rooms" element={<Rooms />} />
+        {/* <Route path="/rooms" element={<Rooms />} /> */}
         <Route path="/single-room" element={<SingleRoom />} />
         <Route path="*" element={<Error />} />
       </Routes>
