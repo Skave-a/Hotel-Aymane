@@ -7,6 +7,9 @@ export const SERVICE_MESSAGES = {
   pageNotFound: 'Page not found',
   featuredRooms: 'featured rooms',
   loading: 'rooms data loading',
+  singleRoom: 'single room',
+  perNight: 'per night',
+  features: 'Features',
 }
 
 export const Title_Services = {

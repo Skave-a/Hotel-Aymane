@@ -1,5 +1,5 @@
 import React, { Component, ReactElement } from "react";
-import { IdefaultValue, IRoom, IRooms } from "./utils/types";
+import { IdefaultValue, IR, IRoom, IRooms } from "./utils/types";
 import items from "./data";
 
 const defaultValue: IdefaultValue = {

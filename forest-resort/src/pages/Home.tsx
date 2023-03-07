@@ -15,7 +15,7 @@ export const Home = () => {
           title={SERVICE_MESSAGES.luxuriousRooms}
           subtitle={SERVICE_MESSAGES.deluxRooms}
         >
-          <Link to="/rooms" className="btn-primary">
+          <Link to="/rooms" className="btnPrimary">
             {SERVICE_MESSAGES.ourRooms}
           </Link>
         </Banner>
