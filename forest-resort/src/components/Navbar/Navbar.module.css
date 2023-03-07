@@ -7,11 +7,28 @@
   background: var(--offWhite);
   z-index: 1;
   display: block;
+  align-items: center;
+  
+}
+
+.navbar a {
+  color: var(--mainBlack);
+  transition: var(--mainTransition);
+}
+
+.navbar a:hover {
+  color: var(--primaryColor);
 }
 
 .navHeader {
   display: flex;
   justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navLink {
+  text-decoration: none;
+  font-size: 35px;
 }
 
 .navBtn {
@@ -88,6 +105,7 @@
   .navIcon {
     display: none;
   }
+
   .navbar {
     display: flex;
   }

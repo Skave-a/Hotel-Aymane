@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../images/logo.svg";
+// import logo from "../../images/logo.svg";
 import { FaAlignRight } from "react-icons/fa";
 import styles from "./Navbar.module.css";
 
@@ -13,8 +13,9 @@ export const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
-          <Link to="/">
-            <img src={logo} alt="forest resort" />
+          <Link to="/" className={styles.navLink}>
+            {/* <img src={logo} alt="forest resort" /> */}
+            Hotel Aymane
           </Link>
         </div>
         <button type="button" className={styles.navIcon} onClick={handleToggle}>
