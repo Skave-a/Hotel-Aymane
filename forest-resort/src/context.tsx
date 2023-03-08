@@ -1,7 +1,7 @@
-import React, { Component, ReactElement } from "react";
+import React, { ChangeEvent, Component, ReactElement } from "react";
 import { IdefaultValue, IR, IRoom } from "./utils/types";
 import items from "./data";
-import { defaultValue } from "./utils/constants";
+import { defaultValue, FILTER_MESSAGES } from "./utils/constants";
 
 const RoomContext = React.createContext(defaultValue);
 
@@ -15,11 +15,23 @@ class RoomProvider extends Component<IRoomProvider> {
   componentDidMount() {
     let rooms = this.formatData(items);
     let featuredRooms = rooms.filter((room) => room.featured === true);
+    let maxPrice = Math.max(...rooms.map((item) => item.price));
+    let maxSize = Math.max(...rooms.map((item) => item.size));
+
     this.setState({
       rooms,
       featuredRooms,
       sortedRooms: rooms,
       loading: false,
+      type: FILTER_MESSAGES.all,
+      capacity: 1,
+      price: maxPrice,
+      minPrice: 0,
+      maxPrice,
+      minSize: 0,
+      maxSize: maxSize,
+      breakfast: false,
+      pets: false,
     });
   }
 
@@ -39,9 +51,47 @@ class RoomProvider extends Component<IRoomProvider> {
     return room as IR;
   };
 
+  handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    const target = event.target;
+    // console.log("target", target);
+    const name = target.name;
+    const value =
+      target.type === "checkbox"
+        ? (target as unknown as HTMLInputElement).checked
+        : target.value;
+    this.setState(
+      {
+        [name]: value,
+      },
+      this.filterRooms
+    );
+  };
+
+  filterRooms = () => {
+    let { rooms, capacity, type, breakfast, price, minSize, maxSize, pets } =
+      this.state;
+    let tempRooms = [...rooms] as unknown as IR[];
+    // capacity = parseInt(capacity);
+    if (type !== "all") {
+      tempRooms = tempRooms.filter((item) => item.type === type);
+    }
+    if (capacity !== 1) {
+      tempRooms = tempRooms.filter((item) => item.capacity >= capacity);
+    }
+    this.setState({
+      sortedRooms: tempRooms,
+    });
+  };
+
   render() {
     return (
-      <RoomContext.Provider value={{ ...this.state, getRoom: this.getRoom }}>
+      <RoomContext.Provider
+        value={{
+          ...this.state,
+          getRoom: this.getRoom,
+          handleChange: this.handleChange,
+        }}
+      >
         {this.props.children}
       </RoomContext.Provider>
     );

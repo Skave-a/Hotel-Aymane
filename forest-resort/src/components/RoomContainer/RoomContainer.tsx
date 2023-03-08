@@ -9,8 +9,6 @@ function RoomContainer({context}: {context: IdefaultValue}) {
   if (loading) {
     return <Loading />;
   }
-  console.log("rooms", rooms);
-  console.log("sortedRooms", sortedRooms);
 
   return (
     <>

@@ -37,6 +37,21 @@ export const Title_Services = {
   beer: 'Strongest Beer',
 }
 
+export const FILTER_MESSAGES = {
+  searchRooms: 'Search Rooms',
+  roomType: 'Room Type',
+  guest: 'Guest',
+  roomPrice: 'Room Price',
+  roomSize: 'Room Size',
+  breakfast: 'Breakfast',
+  pets: 'Pets',
+  single: 'single',
+  double: 'double',
+  family: 'family',
+  presidential: 'presidential',
+  all: 'all',
+}
+
 export const defaultImg =
   "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80";
 
@@ -58,24 +73,23 @@ export const defaultImg =
     };
   }
 
+  function hchange (){
+  }
   export const defaultValue: IdefaultValue = {
     rooms: [],
     sortedRooms: [],
     featuredRooms: [],
     loading: true,
     getRoom: getR,
+    type: FILTER_MESSAGES.all,
+    capacity: 1,
+    price: 0,
+    minPrice: 0,
+    maxPrice: 0,
+    minSize: 0,
+    maxSize: 0,
+    breakfast: false,
+    pets: false,
+    handleChange: hchange,
   };
 
-  export const FILTER_MESSAGES = {
-    searchRooms: 'Search Rooms',
-    roomType: 'Room Type',
-    guest: 'Guest',
-    roomPrice: 'Room Price',
-    roomSize: 'Room Size',
-    breakfast: 'Breakfast',
-    pets: 'Pets',
-    single: 'single',
-    double: 'double',
-    family: 'family',
-    presidential: 'presidential',
-  }
