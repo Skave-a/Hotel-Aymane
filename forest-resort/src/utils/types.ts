@@ -26,7 +26,7 @@ export interface IdefaultValue {
   maxSize: number,
   breakfast: boolean,
   pets: boolean,
-  handleChange: (event: ChangeEvent<HTMLSelectElement>) => void,
+  handleChange: (event: ChangeEvent<HTMLSelectElement | HTMLInputElement>) => void,
 }
 
 export interface IImg {

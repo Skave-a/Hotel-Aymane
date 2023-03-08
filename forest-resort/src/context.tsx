@@ -51,7 +51,7 @@ class RoomProvider extends Component<IRoomProvider> {
     return room as IR;
   };
 
-  handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
+  handleChange = (event: ChangeEvent<HTMLSelectElement | HTMLInputElement>) => {
     const target = event.target;
     // console.log("target", target);
     const name = target.name;
@@ -72,12 +72,15 @@ class RoomProvider extends Component<IRoomProvider> {
       this.state;
     let tempRooms = [...rooms] as unknown as IR[];
     // capacity = parseInt(capacity);
+    // price = parseInt(price);
+
     if (type !== "all") {
       tempRooms = tempRooms.filter((item) => item.type === type);
     }
     if (capacity !== 1) {
       tempRooms = tempRooms.filter((item) => item.capacity >= capacity);
     }
+    tempRooms = tempRooms.filter((item) => item.price <= price);
     this.setState({
       sortedRooms: tempRooms,
     });

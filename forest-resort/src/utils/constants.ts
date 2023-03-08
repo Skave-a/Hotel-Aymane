@@ -41,7 +41,7 @@ export const FILTER_MESSAGES = {
   searchRooms: 'Search Rooms',
   roomType: 'Room Type',
   guest: 'Guest',
-  roomPrice: 'Room Price',
+  roomPrice: 'Room Price $',
   roomSize: 'Room Size',
   breakfast: 'Breakfast',
   pets: 'Pets',

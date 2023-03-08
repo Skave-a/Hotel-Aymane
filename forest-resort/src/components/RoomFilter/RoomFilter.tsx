@@ -46,6 +46,7 @@ export default function RoomFilter(props: IFilter) {
     <section className={styles.filterContainer}>
       <Title title={FILTER_MESSAGES.searchRooms} />
       <form className={styles.filterForm}>
+        {/* type */}
         <div className={styles.formGroup}>
           <label htmlFor="type">{FILTER_MESSAGES.roomType}</label>
           <select
@@ -58,6 +59,7 @@ export default function RoomFilter(props: IFilter) {
             {typesA}
           </select>
         </div>
+        {/* capacity */}
         <div className={styles.formGroup}>
           <label htmlFor="capacity">{FILTER_MESSAGES.guest}</label>
           <select
@@ -70,6 +72,24 @@ export default function RoomFilter(props: IFilter) {
             {peopleA}
           </select>
         </div>
+        {/* price */}
+        <div className={styles.formGroup}>
+          <label htmlFor="price">
+            {FILTER_MESSAGES.roomPrice}
+            {price}
+          </label>
+          <input
+            type="range"
+            name="price"
+            min={minPrice}
+            max={maxPrice}
+            id="price"
+            value={price}
+            onChange={(event) => handleChange(event)}
+            className={styles.formControl}
+          />
+        </div>
+        {/* price */}
       </form>
     </section>
   );
