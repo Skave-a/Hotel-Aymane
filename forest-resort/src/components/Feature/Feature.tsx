@@ -1,7 +1,7 @@
 import styles from "./Feature.module.css";
 import { Component } from "react";
 import { RoomContext } from "../../context";
-import { IdefaultValue } from "../../utils/types";
+import { IdefaultValue, IR } from "../../utils/types";
 import Title from "../Title/Title";
 import { SERVICE_MESSAGES } from "../../utils/constants";
 import Loading from "../Loading/Loading";
@@ -12,7 +12,7 @@ export default class Feature extends Component {
   render() {
     const { loading, featuredRooms: rooms } = this.context as IdefaultValue;
     const allRooms = rooms.map((room, id) => {
-      return <Room key={id} room={room} />;
+      return <Room key={id} room={room as unknown as IR} />;
     });
     return (
       <section className={styles.featuredRooms}>

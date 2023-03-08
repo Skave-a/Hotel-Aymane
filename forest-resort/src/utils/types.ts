@@ -68,3 +68,11 @@ export interface IR {
 export interface IRooms {
   room: IRoom;
 }
+
+export interface IFilter {
+  rooms: IR[],
+}
+
+export interface IRoomContainer {
+  defaultValue: IdefaultValue;
+}

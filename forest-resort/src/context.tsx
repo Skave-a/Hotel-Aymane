@@ -1,31 +1,7 @@
 import React, { Component, ReactElement } from "react";
-import { IdefaultValue, IR, IRoom, IRooms } from "./utils/types";
+import { IdefaultValue, IR, IRoom } from "./utils/types";
 import items from "./data";
-
-function getR() {
-  return {
-    name: "",
-    slug: "",
-    type: "",
-    price: 0,
-    size: 0,
-    capacity: 0,
-    pets: true,
-    breakfast: true,
-    featured: true,
-    description: "",
-    extras: [],
-    images: [],
-    id: "",
-  };
-}
-const defaultValue: IdefaultValue = {
-  rooms: [],
-  sortedRooms: [],
-  featuredRooms: [],
-  loading: true,
-  getRoom: getR,
-};
+import { defaultValue } from "./utils/constants";
 
 const RoomContext = React.createContext(defaultValue);
 
@@ -73,5 +49,15 @@ class RoomProvider extends Component<IRoomProvider> {
 }
 
 const RoomConsumer = RoomContext.Consumer;
+
+export function withRoomConsumer(Component: Function) {
+  return function ConsumeWrapper(props: IR) {
+    return (
+      <RoomConsumer>
+        {(value) => <Component {...props} context={value} />}
+      </RoomConsumer>
+    );
+  };
+}
 
 export { RoomProvider, RoomConsumer, RoomContext };
