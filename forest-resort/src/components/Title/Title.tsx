@@ -5,7 +5,7 @@ export default function Title({ title }: { title: string }) {
   return (
     <div className={styles.sectionTitle}>
       <h4>{title}</h4>
-      <div />
+      <div className="line"></div>
     </div>
   );
 }
