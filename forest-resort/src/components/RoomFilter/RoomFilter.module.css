@@ -57,3 +57,33 @@
     max-width: 1170px;
   }
 }
+
+input[type='range'] {
+  overflow: hidden;
+  width: 200px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  background-color: var(--primaryColor);
+  ;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  height: 10px;
+  -webkit-appearance: none;
+  /* color: #8a8d8c; */
+  margin-top: -1px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: 10px;
+  -webkit-appearance: none;
+  height: 10px;
+  cursor: pointer;
+  /* cursor: ew-resize; */
+  background: #434343;
+  box-shadow: -200px 0 0 200px #adaeae;
+}
+
+.roomOption {
+  cursor: pointer;
+}

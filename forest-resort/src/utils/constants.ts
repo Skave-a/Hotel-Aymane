@@ -1,7 +1,7 @@
 import { IdefaultValue } from "./types";
 
 export const SERVICE_MESSAGES = {
-  services: 'services',
+  services: 'Services',
   ourRooms: 'Our Rooms',
   luxuriousRooms: 'luxurious rooms',
   deluxRooms: 'delux rooms starting at $299',
