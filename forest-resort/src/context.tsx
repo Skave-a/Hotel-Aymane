@@ -53,7 +53,6 @@ class RoomProvider extends Component<IRoomProvider> {
 
   handleChange = (event: ChangeEvent<HTMLSelectElement | HTMLInputElement>) => {
     const target = event.target;
-    // console.log("target", target);
     const name = target.name;
     const value =
       target.type === "checkbox"
@@ -81,6 +80,15 @@ class RoomProvider extends Component<IRoomProvider> {
       tempRooms = tempRooms.filter((item) => item.capacity >= capacity);
     }
     tempRooms = tempRooms.filter((item) => item.price <= price);
+    tempRooms = tempRooms.filter(
+      (item) => item.size >= minSize && item.size <= maxSize
+    );
+    if (breakfast) {
+      tempRooms = tempRooms.filter((item) => item.breakfast === true);
+    }
+    if (pets) {
+      tempRooms = tempRooms.filter((item) => item.pets === true);
+    }
     this.setState({
       sortedRooms: tempRooms,
     });

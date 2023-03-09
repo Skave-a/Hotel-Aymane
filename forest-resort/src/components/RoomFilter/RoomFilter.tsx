@@ -12,7 +12,6 @@ const getUnique = (items: IR[], value: string) => {
 export default function RoomFilter(props: IFilter) {
   const { rooms } = props;
   const context = useContext(RoomContext);
-  console.log("context", context);
   const {
     handleChange,
     type,
@@ -89,7 +88,51 @@ export default function RoomFilter(props: IFilter) {
             className={styles.formControl}
           />
         </div>
-        {/* price */}
+        {/* size */}
+        <div className={styles.formGroup}>
+          <label htmlFor="size">{FILTER_MESSAGES.roomSize}</label>
+          <div className={styles.sizeInputs}>
+            <input
+              type="number"
+              name="minSize"
+              id="size"
+              onChange={(event) => handleChange(event)}
+              value={minSize}
+              className={styles.sizeInput}
+            />
+            <input
+              type="number"
+              name="maxSize"
+              id="size"
+              onChange={(event) => handleChange(event)}
+              value={maxSize}
+              className={styles.sizeInput}
+            />
+          </div>
+        </div>
+        {/* extras */}
+        <div className={styles.formGroup}>
+          <div className={styles.singleExtra}>
+            <input
+              type="checkbox"
+              name="breakfast"
+              id="breakfast"
+              checked={breakfast}
+              onChange={(event) => handleChange(event)}
+            />
+            <label htmlFor="breakfast">{FILTER_MESSAGES.breakfast}</label>
+          </div>
+          <div className={styles.singleExtra}>
+            <input
+              type="checkbox"
+              name="pets"
+              id="pets"
+              checked={pets}
+              onChange={(event) => handleChange(event)}
+            />
+            <label htmlFor="pets">{FILTER_MESSAGES.pets}</label>
+          </div>
+        </div>
       </form>
     </section>
   );
