@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { ChangeEvent, ChangeEventHandler, ReactElement } from "react";
 
 export interface IHero {
   children: ReactElement;
@@ -17,6 +17,16 @@ export interface IdefaultValue {
   featuredRooms: IRoom[],
   loading: boolean,
   getRoom: (slug: string) => IR,
+  type: string,
+  capacity: number,
+  price: number,
+  minPrice: number,
+  maxPrice: number,
+  minSize: number,
+  maxSize: number,
+  breakfast: boolean,
+  pets: boolean,
+  handleChange: (event: ChangeEvent<HTMLSelectElement | HTMLInputElement>) => void,
 }
 
 export interface IImg {
@@ -67,4 +77,12 @@ export interface IR {
 
 export interface IRooms {
   room: IRoom;
+}
+
+export interface IFilter {
+  rooms: IR[],
+}
+
+export interface IRoomContainer {
+  defaultValue: IdefaultValue;
 }

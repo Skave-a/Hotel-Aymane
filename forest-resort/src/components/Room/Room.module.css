@@ -63,10 +63,11 @@
 }
 
 .roomInfo {
-  background: var(--darkGrey);
+  background: #ebebeb;
   text-transform: capitalize;
   padding: 0.5rem 0;
   text-align: center;
   font-weight: 700;
   letter-spacing: var(--mainSpacing);
+  font-family: 'Poppins', sans-serif;
 }

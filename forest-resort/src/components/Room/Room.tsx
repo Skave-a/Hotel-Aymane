@@ -3,10 +3,10 @@ import { IR, IRooms } from "../../utils/types";
 import styles from "./Room.module.css";
 import defaultImg from "../../images/room-1.jpeg";
 import { Link } from "react-router-dom";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-export default function Room(props: IRooms) {
-  const { room } = props;
+export default function Room({ room }: { room: IR }) {
+  // const { room } = props;
   const roomMain: IR = room as unknown as IR;
   return (
     <article className={styles.room}>
@@ -37,5 +37,5 @@ Room.propTypes = {
     slug: PropTypes.string.isRequired,
     images: PropTypes.arrayOf(PropTypes.string).isRequired,
     price: PropTypes.number.isRequired,
-  })
-}
+  }),
+};

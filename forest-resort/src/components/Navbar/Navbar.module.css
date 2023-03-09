@@ -8,11 +8,12 @@
   z-index: 1;
   display: block;
   align-items: center;
-  
+
 }
 
 .navbar a {
   color: var(--mainBlack);
+  color: var(--primaryColor);
   transition: var(--mainTransition);
 }
 
