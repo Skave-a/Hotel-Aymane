@@ -1,0 +1,80 @@
+.room {
+  box-shadow: var(--lightShadow);
+  transition: var(--mainTransition);
+  cursor: pointer;
+
+  background-color: rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+  overflow: hidden;
+}
+
+.room:hover {
+  box-shadow: var(--darkShadow);
+}
+
+.imgContainer {
+  position: relative;
+}
+
+.imgContainer img {
+  width: 100%;
+  display: block;
+  transition: var(--mainTransition);
+}
+
+.priceTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--mainWhite);
+  padding: 0.3rem 0.6rem 0.5rem;
+  border-bottom-right-radius: 1rem;
+  font-size: 0.5rem;
+  text-align: center;
+  transition: var(--mainTransition);
+}
+
+.priceTop h6 {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: var(--mainSpacing);
+}
+
+.roomLink {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(0);
+  transition: all 0.3s linear;
+}
+
+.imgContainer:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.imgContainer:hover img {
+  opacity: 0.3;
+}
+
+.imgContainer:hover .priceTop {
+  opacity: 0;
+}
+
+.imgContainer:hover .roomLink {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.roomInfo {
+  /* background: #ebebeb; */
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: var(--mainSpacing);
+  font-family: 'Poppins', sans-serif;
+}

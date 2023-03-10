@@ -1,0 +1,113 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.75rem 2rem;
+  background: var(--offWhite);
+  z-index: 1;
+  display: block;
+  align-items: center;
+
+}
+
+.navbar a {
+  color: var(--mainBlack);
+  color: var(--primaryColor);
+  transition: var(--mainTransition);
+}
+
+.navbar a:hover {
+  color: var(--primaryColor);
+}
+
+.navHeader {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navLink {
+  text-decoration: none;
+  font-size: 35px;
+}
+
+.navBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.navIcon {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--primaryColor);
+  cursor: pointer;
+}
+
+.navLinks {
+  height: 0;
+  overflow: hidden;
+  transition: var(--mainTransition);
+  list-style-type: none;
+}
+
+.navLinks a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem 0;
+  color: var(--mainBlack);
+  transition: var(--mainTransition);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: var(--mainSpacing);
+}
+
+.navLinks a:hover {
+  color: var(--primaryColor);
+}
+
+.showNav {
+  height: 100px;
+}
+
+.navCenter {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .navBtn {
+    display: none;
+  }
+
+  .navCenter {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    margin: 0;
+  }
+
+  .navLinks {
+    height: auto;
+    display: flex;
+    margin-left: 4rem;
+  }
+
+  .navLinks a {
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .navIcon {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+  }
+}
